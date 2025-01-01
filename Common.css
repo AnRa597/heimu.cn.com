@@ -1,0 +1,492 @@
+/* 这里放置的CSS将应用于所有皮肤 */
+/* 信息框 */
+.entity-info-box {    
+    width: 100%;    
+    max-width: 600px;    
+    margin: 20px auto;    
+    background-color: #f9f9f9;    
+    border: 1px solid #ccc;    
+    border-radius: 5px;    
+    padding: 15px;    
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);    
+}
+/* 表格样式 */
+.entity-info-box table {    
+    width: 100%;    
+    border-collapse: collapse;    
+}    
+    
+.entity-info-box th, .entity-info-box td {    
+    padding: 5px;    
+    text-align: left;    
+    border-bottom: 1px solid #ddd;    
+}    
+    
+.entity-info-box th {    
+    background-color: #f2f2f2;    
+}
+/* 链接样式 */
+a {    
+    color: #87CEFA;    
+    text-decoration: none; /* 去除链接下划线 */    
+}    
+    
+a:hover {    
+    color: #6495ED; 
+    text-decoration: underline; /* 鼠标悬停时显示下划线 */    
+}
+/* 列表样式 */
+
+/* 段落样式 */
+p {    
+    font-size: 16px; /* 更改段落字体大小为 16 像素 */    
+    line-height: 1.6; /* 更改行高为 1.6 */    
+}
+
+/* 黑幕from萌娘百科 */
+.heimu,
+.heimu rt {
+    background-color: #252525;
+}
+.heimu,
+.heimu a,
+a .heimu,
+a.new .heimu,
+span.heimu a.new,
+span.heimu a.external,
+span.heimu a.external:visited,
+span.heimu a.extiw,
+span.heimu a.extiw:visited,
+span.heimu a.mw-disambig,
+span.heimu a.mw-redirect {
+    transition: color .13s linear;
+    color: #252525;
+    text-shadow: none;
+}
+span.heimu:hover,
+span.heimu:active {
+    color: white;
+}
+span.heimu:hover a,
+a:hover span.heimu {
+    color: var(--theme-link-color);
+}
+span.heimu:hover a:visited,
+a:visited:hover span.heimu {
+    color: grey;
+}
+span.heimu:hover a.new,
+a.new:hover span.heimu,
+span.heimu a.new:hover:visited,
+a.new:hover:visited span.heimu {
+    color: var(--theme-alert-color);
+}
+span.heimu:hover a.extiw:visited,
+a.extiw:visited:hover span.heimu {
+    color: #E7E8D2;
+}
+
+/* 阅读更多：https://zh.moegirl.org.cn/MediaWiki:Gadget-site-styles.css 本文引自萌娘百科(https://zh.moegirl.org.cn )文字内容默认使用《知识共享 署名-非商业性使用-相同方式共享3.0》协议。*/
+
+/* 图片可放大化设置 */
+.right-image2{
+ 	max-width:40%;
+ 	float:right;
+ 	padding:0;
+ 	margin:0 8px 1rem 1rem;
+ 	border-radius:0 1rem 0 0;
+ 	text-align:center;
+ 	color:#fbe7b5;
+	text-shadow: 1pt 1pt 1pt rgba(251, 231, 181,0.3);
+	background: #4f4834;
+	border:2pt solid #fbe7b5;
+	box-shadow: 0 0 5pt #4f4834;
+}
+.right-image2 img{
+  	width:calc(100% + 2rem);
+  	height:auto;
+  	margin-bottom:1rem;
+  	margin-left:-1rem;
+  	transition:0.08s;
+  	border-radius:0 1rem 0 0;
+}
+.right-image2 img:hover{
+  	transition-delay:0.3s;
+  	transform: scale(1.4) translateX(-3rem);
+  	border-radius:0;
+}
+.right-image2 p{
+	padding:0 1rem;	
+}
+
+/* 变更透明度动画 */
+@keyframes hide {
+  0% {
+	opacity: 1;
+  }
+  100% {
+	opacity: 0;
+  }
+}
+
+/* 彩色动效及波动文字 */
+.rainbow_text {
+	background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	animation: rainbow_animation 6s ease-in-out infinite;
+	background-size: 400% 100%;
+}
+.wavy-text {
+	display: inline-flex;
+	font-size: 14px;
+	font-family: monospace;
+	text-transform: uppercase;
+}
+.wavy-text span {
+	animation: jiggle;
+	animation-duration: 500ms;
+	animation-iteration-count: infinite;
+	transform: translateY(-2px);
+}
+.wavy-text span:nth-child(10n+1) { animation-delay: 100ms }
+.wavy-text span:nth-child(10n+2) { animation-delay: 200ms }
+.wavy-text span:nth-child(10n+3) { animation-delay: 300ms }
+.wavy-text span:nth-child(10n+4) { animation-delay: 400ms }
+.wavy-text span:nth-child(10n+5) { animation-delay: 500ms }
+.wavy-text span:nth-child(10n+6) { animation-delay: 600ms }
+.wavy-text span:nth-child(10n+7) { animation-delay: 700ms }
+.wavy-text span:nth-child(10n+8) { animation-delay: 800ms }
+.wavy-text span:nth-child(10n+9) { animation-delay: 900ms }
+.wavy-text span:nth-child(10n)   { animation-delay: 1000ms }
+ 
+@keyframes jiggle {
+	from {
+		transform: translateY(-2px);
+	}
+	50% {
+		transform: translateY(2px);
+	}
+	to {
+		transform: translateY(-2px);
+	}
+}
+
+.wavy-text {
+	display: inline-flex;
+	font-size: 14px;
+	font-family: monospace;
+	text-transform: uppercase;
+}
+ 
+.wavy-text span {
+	animation: jiggle;
+	animation-duration: 500ms;
+	animation-iteration-count: infinite;
+	transform: translateY(-2px);
+}
+ 
+.wavy-text span:nth-child(1) { animation-delay: 100ms }
+.wavy-text span:nth-child(2) { animation-delay: 200ms }
+.wavy-text span:nth-child(3) { animation-delay: 300ms }
+.wavy-text span:nth-child(4) { animation-delay: 400ms }
+.wavy-text span:nth-child(5) { animation-delay: 500ms }
+.wavy-text span:nth-child(6) { animation-delay: 600ms }
+.wavy-text span:nth-child(7) { animation-delay: 700ms }
+.wavy-text span:nth-child(8) { animation-delay: 800ms }
+.wavy-text span:nth-child(9) { animation-delay: 900ms }
+.wavy-text span:nth-child(10) { animation-delay: 1000ms }
+ 
+@keyframes jiggle {
+	from {
+		transform: translateY(-2px);
+	}
+	50% {
+		transform: translateY(2px);
+	}
+	to {
+		transform: translateY(-2px);
+	}
+}
+
+@keyframes rainbow_animation {
+	0%,100% {
+		background-position: 0 0;
+	}
+
+	50% {
+		background-position: 100% 0;
+	}
+}
+/*书签框*/
+.styled-quote {
+	background-color:var(--theme-page-text-mix-color-95);
+	color: rgb(var(--theme-page-text-color--rgb));
+	border-left: 0.5rem solid var(--theme-page-accent-mix-color);
+	padding: 1rem;
+	margin: 0.5rem 0 0.5rem 0.25rem;
+	box-shadow: 0.05rem 0.1rem 0.3rem rgba(0,0,0,.25);
+}
+.dark-styled-quote {
+	background-color:rgb(var(--theme-accent-color--rgb));
+	border-left: 0.5rem solid var(--theme-link-color--hover);
+	color:white;
+	padding: 1rem;
+	margin: 0.5rem 0 0.5rem 0.25rem;
+	box-shadow: 0.05rem 0.1rem 0.3rem rgba(0,0,0,.25);
+}
+.dark-styled-quote a{
+	color: white;
+}
+/* 可放大图片 */
+.right-image{
+ 	max-width:40%;
+ 	float:right;
+ 	padding:0;
+ 	margin:0 8px 1rem 1rem;
+ 	border-radius:0 1rem 0 0;
+ 	text-align:center;
+ 	color:#fbe7b5;
+	text-shadow: 1pt 1pt 1pt rgba(251, 231, 181,0.3);
+	background: #857858;
+	border:2pt solid #fbe7b5;
+	box-shadow: 0 0 5pt #857858;
+}
+.right-image img{
+  	width:calc(100% + 2rem);
+  	height:auto;
+  	margin-bottom:1rem;
+  	margin-left:-1rem;
+  	transition:0.08s;
+  	border-radius:0 1rem 0 0;
+}
+.right-image img:hover{
+  	transition-delay:0.35s;
+  	transform: scale(1.5) translateX(-3rem);
+  	border-radius:0;
+}
+.right-image p{
+	padding:0 1rem;	
+}
+  
+.left-image{
+ 	max-width:40%;
+ 	float:left;
+ 	padding:0;
+ 	margin:0 8px 1rem .35rem;
+ 	border-radius:0 1rem 0 0;
+ 	text-align:center;
+ 	color:#fbe7b5;
+	text-shadow: 1pt 1pt 1pt rgba(251, 231, 181,0.3);
+	background: #857858;
+	border:2pt solid #fbe7b5;
+	box-shadow: 0 0 5pt #857858;
+}
+.left-image img{
+  	width:calc(100% + 2rem);
+  	height:auto;
+  	margin-bottom:1rem;
+  	margin-left:-1rem;
+  	transition:0.08s;
+  	border-radius:0 1rem 0 0;
+}
+.left-image img:hover{
+  	transition-delay:0.35s;
+  	transform: scale(1.5) translateX(3rem);
+  	border-radius:0;
+}
+.left-image p{
+	padding:0 1rem;	
+}
+.right-image3 img{
+  	width:calc(100% + 2rem);
+  	height:auto;
+  	transition:0.08s;
+  	border-radius:0 1rem 0 0;
+}
+.right-image3 img:hover{
+  	transition-delay:0.35s;
+  	transform: scale(1.5) translateX(-3rem);
+  	border-radius:0;
+  	z-index:4;
+}
+.slider{
+	background:#e8d49d;
+	padding-top:1rem;
+	padding-bottom:1rem;
+	border-left:15px solid #decb96;
+	width:calc(90% - 3em);
+	text-align:center;
+	font-family:Genshin75W;
+	font-size:18pt;
+	cursor:default;
+	transition:0.2s;
+}
+.slider:hover{
+	transform: translateX(1.2em);
+	opacity:60%;
+	transition:0.2s ease-out 0.05s;
+}
+.text-coverer{
+	background:#e8d49d;
+	cursor:default;
+	transition:1s;
+	position:absolute;
+}
+.text-coverer:hover{
+	opacity:0%;
+	transition:1s ease-in-out 0.4s;
+}
+/* 令日间模式与夜间模式所显示的东西不一样 */
+.theme-fandomdesktop-light .onlydark {
+	display: none;
+}
+.theme-fandomdesktop-dark .onlylight {
+	display: none;
+}
+/* 移除右边导航 */
+.removeWikiaRail {
+    width: calc(100% - 20px);
+    
+}
+.characteristic {  
+    display: block; 
+    margin-bottom: 10px; 
+    font-family: Arial, sans-serif;
+}  
+  
+/* 为每个特性定义不同的样式 */  
+.deny-peace {  
+    color: #FF0000; 
+    font-size: 18px;  
+    font-weight: bold; 
+}  
+  
+.hostile {  
+    color: #0000FF;
+    font-size: 16px; 
+}  
+  
+.aggressive {  
+    color: #FF8C00; 
+    font-size: 16px; 
+}  
+  
+.powerful {  
+    color: #008000;
+    font-size: 16px;
+}  
+  
+.dangerous {  
+    color: #A9A9A9; 
+    font-size: 16px;
+    font-style: italic; 
+}  
+  
+.bio-tech {  
+    color: #8B4513;
+    font-size: 16px;
+}  
+  
+.destroy-timelines {  
+    color: #FF00FF; 
+    font-size: 20px; 
+    text-decoration: underline; 
+}
+.options-container {  
+    width: 80%; /* 容器宽度 */  
+    margin: 20px auto; /* 居中并添加外边距 */  
+    overflow-y: auto; /* 允许Y轴（垂直）滚动 */  
+    max-height: 300px; /* 设置最大高度，超出时滚动 */  
+    border: 1px solid #ccc; /* 可选：添加边框 */  
+    border-radius: 5px; /* 圆角 */  
+    padding: 10px; /* 内边距 */  
+    background-color: #f9f9f9; /* 浅灰色背景 */  
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 阴影效果 */  
+}  
+  
+.scrollable-list {  
+    display: flex; /* 使用Flexbox布局 */  
+    flex-direction: column; /* 默认为column，即垂直方向 */  
+    gap: 10px; /* 特性之间的间距 */  
+}  
+  
+.characteristic {  
+    padding: 10px; /* 内边距 */  
+    border: 1px solid #ddd; /* 可选：添加边框 */  
+    border-radius: 5px; /* 圆角 */  
+    font-size: 16px; /* 字体大小 */  
+    color: #333; /* 字体颜色 */  
+    /* 可以根据需要为每个特性添加特定的样式 */  
+}  
+  
+/* 特定特性的样式 */  
+.deny-peace { color: #FF0000; }  
+.hostile { color: #0000FF; }  
+
+.scrollable-list {  
+    flex-direction: row; /* 水平方向 */  
+    overflow-x: auto; /* 允许X轴（水平）滚动 */  
+    white-space: nowrap; /* 防止内容换行 */  
+   }
+   .page-link {  
+    color: red; /* 初始颜色为红色 */  
+}  
+  
+.page-link.created {  
+    color: lightblue; /* 创建后颜色变为浅蓝色 */  
+}
+.tag {    
+    display: inline-block;    
+    background-color: #f0f0f0;    
+    padding: 5px 10px;    
+    margin-right: 5px; /* 使用margin-right替代margin-inline-end */  
+    border-radius: 5px;    
+}
+.infobox {  
+    border: 1px solid #ccc;  
+    padding: 20px;  
+    margin: 20px;  
+    border-radius: 8px;  
+}  
+  
+.image-container {  
+    margin-bottom: 15px;  
+    text-align: center;  
+}  
+  
+.image-container img {  
+    width: 100%; /* 或者设置具体宽度 */  
+    height: auto;  
+    border-radius: 5px;  
+}  
+  
+.caption {  
+    font-size: 0.85em;  
+    color: #666;  
+    margin-top: 5px;  
+}  
+  
+.group {  
+    margin-bottom: 20px;  
+}  
+  
+.group h2 {  
+    font-size: 1.25em;  
+    color: #333;  
+}  
+  
+.group ul {  
+    list-style-type: none;  
+    padding: 0;  
+}  
+  
+.group ul li {  
+    margin-bottom: 5px;  
+}  
+  
+.group ul li strong {  
+    font-weight: bold;  
+    color: #000;  
+}
