@@ -1,0 +1,15 @@
+<div style="width:99%; padding:5px; border:4px solid #336699; background:white; border-radius:7px; box-shadow: 0 8px 16px 0 rgba(128,192,255,0.2), 0 20px 20px 0 rgba(128,192,255,0.19); text-align:center;">  
+  <div style="font-size:1.3em;margin:0.5em 0 0.25em; color: #336699;">  
+    <gallery type="slider" style="display:block; margin:0 auto;" widths="100%" heights="150px">  
+      File:在帷幕之下.png|人物列表|link=Category:人物|linktext=在帷幕之下中的全部人物一览  
+      File:Obsidian_logo.png|势力列表|link=Category:势力|linktext=在帷幕之下中的势力一览  
+      File:在帷幕之下.png|主线|link=Category:主线|linktext=本wiki收录的所有世界观主线系列  
+      File:在帷幕之下.png|WNIS|link=Category:WNIS|linktext=关于在帷幕之下的缔造者安然浅笑  
+    </gallery>  
+    <big><big><big><big>欢迎进入WNIS帷幕数据库 Wiki！</big></big></big></big><br />  
+    <small><small>{{ColorLink|#336699|WNIS帷幕数据库_Wiki:关于|这里是WNIS帷幕数据库的内部文件数据库，也收录一些同人作品和其他相关资料。|519912604}}</small></small><br />  
+    --------  
+    {{ColorLink|fff|Help:支援wiki|这个wiki正急需你的帮助！}}<br />  
+    <!-- 其他链接 -->  
+  </div>  
+</div>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>WNIS帷幕数据库 Wiki</title>  
+    <link rel="stylesheet" href="css/Common.css">
+    <style>  
+        /* 自定义样式 */  
+        .swiper-container {  
+            width: 100%;  
+            height: 400px; /* 根据需要调整 */  
+        }  
+        .nav-table {  
+            border: 0.4em solid #336699;  
+            background: white;  
+            border-radius: 1em;  
+            box-shadow: 0 8px 16px 0 rgba(128,192,255,0.2), 0 20px 20px 0 rgba(128,192,255,0.19);  
+            text-align: center;  
+            width: 90%;  
+            margin: auto;  
+        }  
+        .nav-table th, .nav-table td {  
+            padding: 10px;  
+        }  
+        .nav-table th {  
+            font-size: 150%;  
+        }  
+        .recent-changes {  
+            width: 99%;  
+            padding: 5px;  
+            border: 4px solid #336699;  
+            background: white;  
+            border-radius: 7px;  
+            box-shadow: 0 8px 16px 0 rgba(128,192,255,0.2), 0 20px 20px 0 rgba(128,192,255,0.19);  
+            text-align: left;  
+        }  
+        .recent-changes a {  
+            color: #336699;  
+        }  
+    </style>  
+</head>  
+<body>  
+  
+<div style="width:99%; padding:5px; border:4px solid #336699; background:white; border-radius:7px; box-shadow: 0 8px 16px 0 rgba(128,192,255,0.2), 0 20px 20px 0 rgba(128,192,255,0.19); text-align:center;">  
+    <h1 style="font-size:1.3em; margin:0.5em 0 0.25em; color: #336699;">欢迎进入WNIS帷幕数据库 Wiki！</h1>  
+    <p style="font-size:0.8em; color: #336699;">  
+        <a href="#about" style="color: #336699;">关于我们</a> •   
+        <a href="#copyright" style="color: #336699;">版权协议</a> •   
+        <a href="#editing" style="color: #336699;">编辑指南</a> •   
+        <a href="#tags" style="color: #336699;">页面标签</a> •   
+        <a href="#random" style="color: #336699;">随机页面</a> •   
+        <a href="#featured" style="color: #336699;">精品页面</a> •   
+        <a href="#support" style="color: #336699;">支援我们</a> •   
+        <a href="#policies" style="color: #336699;">网站政策</a>  
+    </p>  
+    <p>这个wiki正急需你的帮助！</p>  
+</div>  
+  
+<div class="swiper-container">  
+    <!-- Swiper slides, etc. (same as before) -->  
+</div>  
+  <!-- 添加一些间距 -->  
+<div style="height: 20px;"></div>  
+<style>  
+    body {  
+        text-align: center; /* 使整个页面的文本居中 */  
+        margin: 0; /* 移除默认的margin，以防影响居中效果 */  
+        height: 100vh; /* 让body占据整个视口高度 */  
+        display: flex; /* 使用Flexbox布局 */  
+        justify-content: center; /* 在主轴（水平方向）上居中对齐子元素 */  
+        align-items: center; /* 在交叉轴（垂直方向）上居中对齐子元素 */  
+        flex-direction: column; /* 子元素垂直排列 */  
+    }  
+    .main-title {  
+        margin: 0; /* 移除标题默认的margin */  
+    }  
+</style>  
+</head>  
+<body>  
+<h1 class="main-title">主页页面</h1>  
+<table>  
+    <table>  
+        <tr>  
+            <th colspan="3" style="text-align: center; font-size: 150%;">导航栏</th>  
+        </tr>  
+        <tr>  
+            <td>  
+                <a href="people.html">  
+                    <img src="在帷幕之下.png" alt="人物" style="width: 150px; height: 150px;">  
+                    <br>  
+                    <span style="color: rgb(0, 0, 0);">人物</span>  
+                </a>  
+            </td>  
+            <td>  
+                <a href="factions.html">  
+                    <img src="在帷幕之下.png" alt="势力" style="width: 150px; height: 150px;">  
+                    <br>  
+                    <span style="color: rgb(0, 0, 0);">势力</span>  
+                </a>  
+            </td>  
+            <td>  
+                <a href="World_view.html">  
+                    <img src="在帷幕之下.png" alt="世界观" style="width: 150px; height: 150px;">  
+                    <br>  
+                    <span style="color: rgb(0, 0, 0);">世界观</span>  
+                </a>  
+            </td>  
+        </tr>  
+    </table>
+    <!-- 如果有更多行，继续添加 <tr> 元素 -->  
+</table>
+  
+<div class="recent-changes">  
+    <body>  
+        <h3>最近更改</h3>  
+        <div id="changeLog"></div>  
+      
+        <script>  
+            // 假设这是你的更改函数  
+            function updateContent(newContent) {  
+                // 更新页面内容（这里只是示例，实际情况可能更复杂）  
+                // ...  
+      
+                // 记录更改到localStorage  
+                const log = localStorage.getItem('changeLog') || [];  
+                log.unshift(`更改于 ${new Date().toLocaleString()}: ${newContent}`);  
+                localStorage.setItem('changeLog', JSON.stringify(log.slice(0, 10))); // 限制日志数量  
+      
+                // 显示最近的更改  
+                displayChanges();  
+            }  
+      
+            function displayChanges() {  
+                const log = JSON.parse(localStorage.getItem('changeLog') || '[]');  
+                const changeLogDiv = document.getElementById('changeLog');  
+                changeLogDiv.innerHTML = ''; // 清空之前的更改记录  
+                log.forEach(entry => {  
+                    const p = document.createElement('p');  
+                    p.textContent = entry;  
+                    changeLogDiv.appendChild(p);  
+                });  
+            }  
+      
+            // 示例：更新内容  
+            updateContent('修改了标题颜色');  
+      
+            // 页面加载时显示更改  
+            window.onload = displayChanges;  
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>  
+<script>  
+    // Swiper initialization (same as before)  
+</script>  
+  
+</body>  
+</html>
